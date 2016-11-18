@@ -1,2 +1,5 @@
 # CO2001HCI
-project
+
+To do list:
+-Multithreading
+-Serializable
