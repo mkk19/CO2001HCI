@@ -8,44 +8,41 @@ import java.util.Scanner;
 
 public class Logic {
 	
-	boolean gameBeingPlayed = true;
+	static boolean gameBeingPlayed = true;
+	Scanner scanner = new Scanner(System.in);
+	static String [] guesses = FileHandle.Words50.toArray(new String[FileHandle.Words50.size()]);
+	private static Random random;
+	static char[] randomWordToGuess = guesses[random.nextInt(guesses.length)].toCharArray();
+	static int numOfGuesses = randomWordToGuess.length;
 	
-	/* public static void main(String[] args){
-        BufferedReader br = null;
-		
-		String line;
-		String randomWord;
-		FileReader fr;
-		ArrayList<String> allWords = new ArrayList<String>();
-		ArrayList<String> Words50 = new ArrayList<String>();
-		Random random = new Random();
-		boolean gameBeingPlayed = true;
-		try {
-			br = new BufferedReader(fr = new FileReader("file1.txt"));
-			
-			while((line = br.readLine()) != null){
-				allWords.add(line);
-			}
-			fr.close();
-			
-			Random r = new Random();
-			for (int i=0; i <50; i++){
-				int nextLine = r.nextInt(allWords.size());
-				Words50.add(allWords.get(nextLine));
-				
-			}
-			
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} */
+
 	
 	public static void main(String[] args){
-		
+		while(gameBeingPlayed){
+			char[] playerGuess = new char[numOfGuesses];
+			
+			for(int i = 0; i < playerGuess.length; i++){
+				playerGuess[i]  = '_';
+			} //end of forloop
+			
+			boolean isWordGuessed = false;
+			int attempts = 0;
+			while(!isWordGuessed && attempts != numOfGuesses){
+				System.out.println("Current guesses: ");
+				System.out.println(playerGuess);
+				System.out.println("You have " + (numOfGuesses - attempts) + " tries left");
+			} // end of (nested) while
+			
+			
+		} // end of gameBeingPlayed 
 	
+		
 	
 	}
-		
+
+
+
+
 		
 		
 		

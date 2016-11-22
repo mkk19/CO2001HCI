@@ -7,19 +7,21 @@ import java.util.Random;
 
 public class FileHandle {
 	
+	public static BufferedReader br = null;
+	
+	public static String line;
+	String randomWord;
+	public static FileReader fr;
+	public static ArrayList<String> allWords = new ArrayList<String>();
+	public static ArrayList<String> Words50 = new ArrayList<String>();
+	public static Random random = new Random();
+
+	
 	public static int i = 1;
 	
 	public static void main(String[] args){
        
-		BufferedReader br = null;
 		
-		String line;
-		String randomWord;
-		FileReader fr;
-		ArrayList<String> allWords = new ArrayList<String>();
-		ArrayList<String> Words50 = new ArrayList<String>();
-		Random random = new Random();
-
 		try {
 			br = new BufferedReader(fr = new FileReader("file" + i + ".txt"));
 			
