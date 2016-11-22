@@ -1,14 +1,12 @@
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
-import java.util.Scanner;
 
-public class Logic {
+public class FileHandle {
 	
-	/* public static void main(String[] args){
+	public static void main(String[] args){
         BufferedReader br = null;
 		
 		String line;
@@ -36,17 +34,8 @@ public class Logic {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} */
-	
-	public static void main(String[] args){
+		}
 		
-	
-	
-	}
-		
-		
-		
-		
+
 }
-		 
-		 
+}
