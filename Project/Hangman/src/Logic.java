@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Logic {
 	
 	static boolean gameBeingPlayed = true;
-	Scanner scanner = new Scanner(System.in);
+	static Scanner scanner = new Scanner(System.in);
 	static String [] guesses = FileHandle.Words50.toArray(new String[FileHandle.Words50.size()]);
 	private static Random random;
 	static char[] randomWordToGuess = guesses[random.nextInt(guesses.length)].toCharArray();
@@ -29,15 +29,24 @@ public class Logic {
 			int attempts = 0;
 			while(!isWordGuessed && attempts != numOfGuesses){
 				System.out.println("Current guesses: ");
-				System.out.println(playerGuess);
+				printArray(playerGuess);
 				System.out.println("You have " + (numOfGuesses - attempts) + " tries left");
+				System.out.println("Enter a single character please");
+				char input = scanner.nextLine().charAt(0);
+				attempts++;
+				
+				
 			} // end of (nested) while
 			
 			
 		} // end of gameBeingPlayed 
 	
-		
+		}
 	
+	public static  void printArray(char[] array){
+		for(int i = 0; i < array.length; i++){
+			System.out.println(array[i] + " ");
+		}
 	}
 
 
