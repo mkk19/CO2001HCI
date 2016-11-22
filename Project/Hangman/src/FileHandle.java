@@ -4,10 +4,14 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
+
 public class FileHandle {
 	
+	public static int i = 1;
+	
 	public static void main(String[] args){
-        BufferedReader br = null;
+       
+		BufferedReader br = null;
 		
 		String line;
 		String randomWord;
@@ -15,9 +19,9 @@ public class FileHandle {
 		ArrayList<String> allWords = new ArrayList<String>();
 		ArrayList<String> Words50 = new ArrayList<String>();
 		Random random = new Random();
-		boolean gameBeingPlayed = true;
+
 		try {
-			br = new BufferedReader(fr = new FileReader("file1.txt"));
+			br = new BufferedReader(fr = new FileReader("file" + i + ".txt"));
 			
 			while((line = br.readLine()) != null){
 				allWords.add(line);
@@ -34,8 +38,12 @@ public class FileHandle {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		
 		}
 		
+		for (int i = 1; i <5; i++){
+			System.out.println(Words50);
+		}
 
 }
 }

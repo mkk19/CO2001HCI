@@ -8,6 +8,8 @@ import java.util.Scanner;
 
 public class Logic {
 	
+	boolean gameBeingPlayed = true;
+	
 	/* public static void main(String[] args){
         BufferedReader br = null;
 		
